@@ -199,7 +199,8 @@ a {
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -212,7 +213,8 @@ a {
 
 .contact-form-group {
   margin-bottom: 1.5rem;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
 }
 
 .contact-label {
@@ -250,7 +252,8 @@ a {
 }
 
 .contact-button {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   background-color: #10b981;
   color: #fff;
   font-weight: 700;
@@ -277,93 +280,174 @@ a {
 
 /* Skills Section */
 
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .text-2xl {
-    font-size: 1.5rem; 
-    font-weight: 600; 
-  }
-  
-  .pb-4 {
-    padding-bottom: 1rem; 
-  }
-  
-  .skill{
-    background-color: #86efac;
-  }
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1rem;
-  }
-  
-  .skill-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; 
-    padding: 1rem;
-    border: 4px solid;
-    border-radius: 0.5rem;
-    width: fit-content; 
-    box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.5);
-  }
-  
-  .icon-size {
-    width: 1.5rem; 
-    height: 1.5rem; 
-    color: currentColor; 
-  }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  /* Projects Section */
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .text-2xl {
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding-bottom: 1rem;
-  }
-  
-  .pb-4 {
-    padding-bottom: 1rem;
-  }
-  
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.skill {
+  background-color: #86efac;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border: 4px solid;
+  border-radius: 0.5rem;
+  width: fit-content;
+  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.5);
+}
+
+.icon-size {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: currentColor;
+}
+
+/* Projects Section */
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.project-description {
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+
+.project-description:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content {
     gap: 1rem;
   }
-  
-  .project-item {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #e5e7eb; 
-    border-radius: 0.5rem; 
+
+  .nav-links a,
+  .cv-btn {
+    font-size: 1rem;
+    padding: 10px 5px;
+  }
+
+  .testimonial {
     padding: 1rem;
   }
-  
-  .project-image {
+
+  .contact-form-group {
     width: 100%;
-    height: auto;
-    border-radius: 0.5rem; 
   }
-  
-  .project-description {
-    padding-top: 0.5rem;
-    cursor: pointer;
+
+  .contact-button {
+    width: 100%;
   }
-  
-  .project-description:hover {
-    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 0 20px;
   }
-  
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.875rem;
+  }
+
+  .hero-image img {
+    max-width: 200px;
+  }
+
+  .nav-links a,
+  .cv-btn {
+    padding: 5px 10px;
+  }
+
+  .testimonial {
+    padding: 0.5rem;
+  }
+
+  .section {
+    padding: 20px;
+  }
+}
